@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded",handleJson)
 function handleJson(){
-  let requestFile = "index.json"
+  // let requestFile = "index.json"
+  let requestFile = "export-test.json"
   fetch(requestFile).then((res) => {
     return res.json()
   }).then((res) => {
@@ -32,7 +33,7 @@ function handleJson(){
           break;
       }
     })
-    if (res.toast !== undefined) {
+    if (res.toast !== undefined && res.toast.message !== "") {
       let customButtons = []
       let closeText = "Close"
       if (res.toast.action.close !== "" || res.toast.action.close !== undefined){

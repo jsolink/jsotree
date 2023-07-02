@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded",handleJson)
 function handleJson(){
-  // let requestFile = "index.json"
-  let requestFile = "export.json"
+  let requestFile = "index.json"
+  // let requestFile = "export.json"
   fetch(requestFile).then((res) => {
     return res.json()
   }).then((res) => {
@@ -11,18 +11,24 @@ function handleJson(){
     res.items.forEach(element => {
       switch (element.type) {
         case "profilePicture":
-          if (element.src !== ""){
+          if (element.src !== ""||element.src !== undefined){
             html += htmlProfilePicture(element)
           }
           break;
         case "button":
-          if (element.text !== ""){
+          if (element.text !== ""||element.text !== undefined){
             html += htmlButton(element)
           }
           break;
         case "text":
-          if (element.text !== ""){
+          if (element.text !== ""||element.text !== undefined){
             html += htmlText(element)
+          }
+          break;
+        
+        case "lightbox":
+          if (element.src !== ""||element.src !== undefined){
+            html += htmlLightbox(element)
           }
           break;
       
@@ -60,6 +66,7 @@ function handleJson(){
     }
     // console.log(html)
     items.innerHTML += html
+    refreshFsLightbox();
   }).catch((e) => {
     console.error(e)
     items.innerHTML += "<h1>Error</h1>"

@@ -52,6 +52,20 @@
     {
       "type": "html",
       "html": "<div class='centerContainer'><h1>JSOTREE</h1></div>"
+    },
+    {
+      "type": "lightbox",
+      "src": "https://sk5s.cyou/sk5s/img/sk5s-project-bar.png",
+      "alt": "Lightbox test"
+    },
+    {
+      "type": "lightbox",
+      "src": "https://i3.ytimg.com/vi/wnh5wISWuOg/maxresdefault.jpg",
+      "youtube": "https://www.youtube.com/watch?v=wnh5wISWuOg"
+    },
+    {
+      "type": "html",
+      "html": "<div style='padding-top: 80px;'></div>"
     }
   ],
   "toast": {

@@ -96,6 +96,10 @@ body {
   background-color: var(--text1);
   color: var(--background1);
 }
+.my-links img {
+  max-width: 100%;
+  border-radius: 10px;
+}
 
 .logo {
   width: 100%;

@@ -4,17 +4,27 @@ function htmlProfilePicture(data){
 }
 function htmlButton(data){
   // console.log(data.alt)
+  let valid = false
+  if (data.text !== "" && data.text !== undefined){
+    valid = true
+  }
+  if (data.img !== "" && data.img !== undefined){
+    valid = true
+  }
+  if (!valid) return ""
   let target = "_blank"
   let rel = `rel="noopener nofollow"`
   let disable = ""
   let href = "#"
   let icon = ""
+  let image = ""
   if (data.target !== "" && data.target !== undefined) target = data.target
   if (data.rel !== "" && data.rel !== undefined) rel = `rel="${data.rel}"`
   if (data.href === "" || data.href === undefined) disable = "disabled"
   if (data.href !== "" && data.href !== undefined) href = data.href
   if (data.icon !== "" && data.icon !== undefined) icon = `<i class="${data.icon}"></i>`
-  return `<div class="my-links"><a href="${href}" target="${target}" ${rel} class="${disable}">${icon} ${data.text}</a></div>`
+  if (data.img !== "" && data.img !== undefined) image = `<img src="${data.img}" alt="">`
+  return `<div class="my-links"><a href="${href}" target="${target}" ${rel} class="${disable}">${icon} ${data.text} ${image}</a></div>`
 }
 function htmlText(data){
   let color = "var(--text1)"

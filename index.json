@@ -42,12 +42,14 @@
     {
       "type": "button",
       "href": "https://github.com/sk5s",
-      "text": "2"
+      "text": "2 With picture",
+      "img": "https://sk5s.cyou/sk5s/img/sk5s-project-bar.png"
     },
     {
       "type": "button",
       "href": "https://github.com/sk5s",
-      "text": "3"
+      "text": "",
+      "img": "https://sk5s.cyou/sk5s/img/sk5s-project-bar.png"
     },
     {
       "type": "html",

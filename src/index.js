@@ -1,4 +1,4 @@
-let errorText = "Error 錯誤"
+let errorText = "Error"
 
 document.addEventListener("DOMContentLoaded",handleJson)
 function handleJson(){
@@ -18,9 +18,7 @@ function handleJson(){
           }
           break;
         case "button":
-          if (element.text !== "" && element.text !== undefined){
-            html += htmlButton(element)
-          }
+          html += htmlButton(element)
           break;
         case "text":
           if (element.text !== "" && element.text !== undefined){

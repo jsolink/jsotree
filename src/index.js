@@ -1,7 +1,9 @@
+let errorText = "Error 錯誤"
+
 document.addEventListener("DOMContentLoaded",handleJson)
 function handleJson(){
-  // let requestFile = "index.json"
-  let requestFile = "export.json"
+  let requestFile = "index.json"
+  // let requestFile = "export.json"
   fetch(requestFile).then((res) => {
     return res.json()
   }).then((res) => {
@@ -11,29 +13,29 @@ function handleJson(){
     res.items.forEach(element => {
       switch (element.type) {
         case "profilePicture":
-          if (element.src !== ""||element.src !== undefined){
+          if (element.src !== "" && element.src !== undefined){
             html += htmlProfilePicture(element)
           }
           break;
         case "button":
-          if (element.text !== ""||element.text !== undefined){
+          if (element.text !== "" && element.text !== undefined){
             html += htmlButton(element)
           }
           break;
         case "text":
-          if (element.text !== ""||element.text !== undefined){
+          if (element.text !== "" && element.text !== undefined){
             html += htmlText(element)
           }
           break;
         
         case "lightbox":
-          if (element.src !== ""||element.src !== undefined){
+          if (element.src !== "" && element.src !== undefined){
             html += htmlLightbox(element)
           }
           break;
       
         default:
-          if (element.html !== ""){
+          if (element.html !== "" && element.html !== undefined){
             html += element.html
           }
           break;
@@ -42,7 +44,7 @@ function handleJson(){
     if (res.toast !== undefined && res.toast.message !== "") {
       let customButtons = []
       let closeText = "Close"
-      if (res.toast.action.close !== "" || res.toast.action.close !== undefined){
+      if (res.toast.action.close !== "" && res.toast.action.close !== undefined){
         closeText = res.toast.action.close
       }
       if (res.toast.action !== undefined) {
@@ -69,7 +71,7 @@ function handleJson(){
     refreshFsLightbox();
   }).catch((e) => {
     console.error(e)
-    items.innerHTML += "<h1>Error</h1>"
+    items.innerHTML += `<h1>${errorText}</h1>`
   })
   revealPage()
 }

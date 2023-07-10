@@ -2,8 +2,8 @@ let errorText = "Error 錯誤"
 
 document.addEventListener("DOMContentLoaded",handleJson)
 function handleJson(){
-  let requestFile = "index.json"
-  // let requestFile = "export.json"
+  // let requestFile = "index.json"
+  let requestFile = "export.json"
   fetch(requestFile).then((res) => {
     return res.json()
   }).then((res) => {

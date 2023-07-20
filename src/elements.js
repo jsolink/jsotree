@@ -38,7 +38,7 @@ function htmlLightbox(data){
   let alt = `alt="${data.alt}"`
   if (data.alt === undefined || data.alt === "") alt = ""
   if (data.youtube !== "" && data.youtube !== undefined){
-    return `<a class="lightbox" data-fslightbox href="${data.youtube}"><img src="${data.src}"></a>`
+    return `<a class="lightbox" data-fslightbox href="${data.youtube}"><img src="${data.src}" ${alt}></a>`
   }
-  return `<a class="lightbox" data-fslightbox href="${data.src}"><img src="${data.src}"></a>`
+  return `<a class="lightbox" data-fslightbox href="${data.src}"><img src="${data.src}" ${alt}></a>`
 }

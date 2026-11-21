@@ -17,7 +17,7 @@
     },
     {
       "type": "button",
-      "href": "https://sk5s.cyou/",
+      "href": "https://twapp.sk5s.com/",
       "text": "sk5s projects",
       "target": "",
       "rel": ""
@@ -43,13 +43,13 @@
       "type": "button",
       "href": "https://github.com/sk5s",
       "text": "2 With picture",
-      "img": "https://sk5s.cyou/sk5s/img/sk5s-project-bar.png"
+      "img": "https://me.sk5s.org/img/sk5s-project-bar.png"
     },
     {
       "type": "button",
       "href": "https://github.com/sk5s",
       "text": "",
-      "img": "https://sk5s.cyou/sk5s/img/sk5s-project-bar.png"
+      "img": "https://me.sk5s.org/img/sk5s-project-bar.png"
     },
     {
       "type": "html",
@@ -57,7 +57,7 @@
     },
     {
       "type": "lightbox",
-      "src": "https://sk5s.cyou/sk5s/img/sk5s-project-bar.png",
+      "src": "https://me.sk5s.org/img/sk5s-project-bar.png",
       "alt": "Lightbox test"
     },
     {
@@ -73,7 +73,7 @@
   "toast": {
     "message": "Toast message",
     "action": {
-      "href": "https://sk5s.cyou/",
+      "href": "https://twapp.sk5s.com/",
       "text": "來去看看",
       "close": "關閉"
     }
